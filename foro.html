@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Dinopedia</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Load Require CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="assets/css/boxicon.min.css" rel="stylesheet">
+    <!-- tipo de letra -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+	<!-- carga CSS -->
+    <link rel="stylesheet" href="assets/css/estilos.css">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light" 
+        style="position: sticky; padding: 0%; top: 0; width: 100%; z-index: 500; background-color: ghostwhite;">
+
+        <!--navbar-expand-lg = envoltorio para que el navbar se estire en lg
+        navbar-light = texto negro de la letra
+        bg-white = fondo de color blanco
+        -->
+    
+        <div class="container d-flex justify-content-between align-items-center">
+            
+            <a class="navbar-brand h1" href="index.html" style="justify-content: start; margin: 0%; padding-left: 1%; padding-right: 1%;">
+            <!--navbar-brand = clase se utiliza para resaltar la marca o logotipo de su página-->	
+                <img src="assets/img/dinosaur.png" style="width: 3em; margin: auto;">
+                <span class="text-dark" style="text-align: center; font-size: 24px;">Dinopedia</span>
+            </a>
+                
+            <!--	boton de hamburguesa --> 
+            <button class="navbar-toggler border-0" 
+                type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbar-toggler-success" 
+                aria-controls="navbarSupportedContent" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>
+        
+            <!------------------------------------------- Opciones del Menu		-->
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" 
+		        id="navbar-toggler-success">
+            
+                <!-------collapse navbar-collapse= para agrupar y ocultar el contenido de la barra de navegación 
+                por un punto de interrupción principal.
+                flex-fill = obliga a que todos los elementos tengan el mismo tamaño de ancho
+                d-lg-flex = utilidades para crear un contenedor flexbox y transforme los elementos secundarios 
+                directos en elementos flexibles
+                -->
+                <div class="flex-fill mx-xl-5">
+            <!--	  mx=para clases que establecen tanto *-lefty*-right-->
+                    <ul class="nav navbar-nav d-flex justify-content-center text-center text-dark" style="margin: 0%; font-size: 20px;">
+                <!--   .navbar-nav para una navegación ligera y de altura completa 
+                    (incluida la compatibilidad con menús desplegables).-->
+                        <li class="nav-item active">
+                            <a class="nav-link btn-outline-primary px-3 py-4" href="index.html">Inicio</a>
+                        <!-- px = padding y mx es el margin 
+                        rounded-pill =genera ese boton con bordes redondeados rounded-circle-->	
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link btn-outline-primary px-3 py-4 dropdown-toggle" type="button" id="dropdownMenuButton1" 
+                                style="width: 100%;" data-bs-toggle="dropdown" aria-expanded="false">
+                                El mundo mesozoico
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="triasico.html">Triásico</a></li>
+                                <li><a class="dropdown-item" href="jurasico.html">Jurásico</a></li>
+                                <li><a class="dropdown-item" href="cretacico.html">Cretácico</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary py-4 px-3" href="enciclopedia.html">Dinosaurios de la A a la Z</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary py-4 px-3" href="paleoarte.html">Paleoarte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary py-4 px-3" href="foro.html">Foro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary py-4 px-3" href="tienda.html">Tienda</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar nav-fill align-self-center d-flex text-dark">
+                    <a class="nav-link btn-outline-primary px-3 dropdown-toggle" type="button" id="dropdownMenuButton3" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class='bx bxs-user-account bx-md'></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="dropdownMenuButton3">
+                        <li><a class="dropdown-item" href="#">Ingresar</a></li>
+                        <li><a class="dropdown-item" href="#">Registrarse</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <section style="margin: 2%;">
+
+        <h1 class="h1 text-center">En construcción</h1>
+
+        <p class="texto-articulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum eum deserunt assumenda
+            modi magnam dolore itaque iste, nulla quo quaerat, pariatur nisi labore quibusdam nobis, adipisci molestiae
+            provident optio accusamus! Earum doloribus laboriosam consectetur suscipit dolor labore aliquam illo,
+            molestiae sit itaque minus eveniet voluptas recusandae nisi. Repudiandae, culpa non velit eligendi obcaecati
+            impedit optio est. Animi labore a impedit sint doloribus necessitatibus id, accusantium nemo harum ipsa
+            consectetur error omnis maxime provident aliquid debitis reprehenderit maiores consequatur repellat pariatur
+            esse praesentium blanditiis fuga. Mollitia labore, molestias quis quos voluptatibus porro enim commodi
+            aperiam tempora ducimus et maxime architecto eligendi. Molestiae reprehenderit eius saepe fugiat sint iusto,
+            possimus, voluptatem quaerat impedit sed eaque? Officiis inventore a ducimus neque, nisi magnam temporibus
+            velit accusamus optio quasi sunt, doloremque non voluptatibus quidem nulla ut provident, harum quos sapiente
+            suscipit explicabo assumenda libero deserunt. Voluptatum praesentium sint blanditiis magni eligendi aliquam
+            earum ullam adipisci aliquid. Dolore hic molestias expedita consequatur, quas totam vel dolorum? Dignissimos
+            vero, a ad mollitia ducimus placeat sapiente quo ex nam tempore aut fugit possimus expedita corrupti
+            quibusdam voluptatem libero voluptates. Odio eum similique facere tenetur sed molestiae aut sequi deleniti
+            quod doloribus architecto, saepe ipsum temporibus consectetur maiores natus placeat. Incidunt natus culpa
+            tempora. Quod soluta suscipit vitae cupiditate unde dolorum nemo voluptas voluptatum dignissimos nobis
+            magnam nostrum doloribus qui repellendus voluptate, ducimus, eligendi similique nihil corrupti totam culpa,
+            temporibus rem tenetur. Error nisi, architecto vel odio porro corporis voluptas incidunt nemo, magni
+            explicabo a labore. Porro quasi fuga ex voluptates vel, ea unde repellat eligendi sapiente odio officia hic
+            accusantium, vero nihil perspiciatis dolorum eaque, nisi excepturi. Quia dolorum eligendi odit optio qui
+            labore ex sit nulla placeat mollitia vitae cum, earum blanditiis ratione architecto ipsa nesciunt ipsam?
+            Quas maiores nulla quasi quisquam illum repellendus nihil molestias, voluptatum harum sunt exercitationem
+            deserunt beatae mollitia! Temporibus odio, minus fugit quia laboriosam quibusdam quisquam sint error
+            sapiente commodi soluta? Voluptate perspiciatis aliquid in ea molestiae provident ut nostrum suscipit magnam
+            rerum, est sapiente voluptas voluptates voluptatem, doloribus enim odio quibusdam nulla totam mollitia fuga
+            omnis dolores harum aspernatur! Doloremque cumque, qui ad voluptatibus quos aperiam nulla accusamus
+            molestiae dolorem modi natus voluptates voluptatum corrupti ducimus. Velit voluptatibus id qui aliquam
+            cumque fugiat tenetur tempore dolorum alias unde reiciendis quis minima maiores, repellendus animi libero
+            quae esse nobis commodi, eveniet ipsam corporis. Reprehenderit aperiam commodi debitis sequi voluptatem
+            optio ullam.</p>
+
+    </section>
+
+    <!-- Start Footer -->
+    <footer class="bg-secondary">
+
+        <div class="container">
+            <div class="row bg-secondary justify-content-center py-2">
+                <div class="col-12 col-sm-6 col-md-3 text-start">
+                    <a class="text-decoration-none" href="index.html">
+                        <h2 class="text-light">Dinopedia</h2>
+                    </a>
+                    <p class="text-light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, voluptate sed.</p>
+                    <ul class="list-unstyled text-light">
+                        <li>
+                            <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-light py-1" 
+                            href="tel:012-3456-7890">012-3456-7890</a>
+                        </li>
+                        <li>
+                            <i class='bx-fw bx bx-mail-send bx-xs'></i><a class="text-decoration-none text-light py-1"
+                            href="mailto:dinopedia.contacto@gmail.com">dinopedia.contacto@gmail.com</a>
+                        </li>
+                    </ul>
+                    <ul class="list-inline footer-icons light-300">
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="http://facebook.com">
+                                <i class='bx bxl-facebook-square bx-md'></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="http://twitter.com">
+                                <i class='bx bxl-twitter bx-md'></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="http://instagram.com">
+                                <i class='bx bxl-instagram bx-md'></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="https://web.telegram.org/#/login">
+                                <i class='bx bxl-telegram bx-md'></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-2 text-start">
+                    <h2 class="text-light">Enlaces</h2>
+                    <ul class="list-unstyled text-light">
+                        <li>
+                            <a class="text-decoration-none text-light" href="index.html">
+                                Inicio
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="triasico.html">
+                                El mundo mesozoico
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="enciclopedia.html">
+                                Dinosaurios de la A a la Z
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="paleoarte.html">
+                                Paleoarte
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="foro.html">
+                                Foro
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-2 text-start">
+                    <h2 class="text-light">Tienda</h2>
+                    <ul class="list-unstyled text-light">
+                        <li>
+                            <a class="text-decoration-none text-light" href="#">
+                                Ropa
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="#">
+                                Accesorios
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="#">
+                                Pósters
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="#">
+                                Rompecabezas
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="#">
+                                Juguetes
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-5 text-light text-start">
+                    <h2 class="text-light">Suscríbase a nuestra newsletter</h2>
+                    <form action="#" method="POST">
+                        <div class="form-row d-flex flex-fill">
+                            <input class="form-control" type="email" placeholder="Ingrese su e-mail" required>
+                            <input class="btn btn-primary" type="submit" value="Suscribirse">
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 bg-primary">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-12 col-sm-6">
+                        <p class="text-lg-start text-center text-light light-300">
+                            © Copyright 2021 Dinopedia. Todos los derechos reservados.
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <p class="text-lg-end text-center text-light light-300">
+                            Diseñado por <a rel="sponsored" class="text-decoration-none text-light" 
+                            href="https://www.linkedin.com/in/augusto-rehfeldt-9aa01320a/" target="_blank"><strong>Augusto Rehfeldt</strong></a> y <a rel="sponsored" class="text-decoration-none text-light" 
+                            href="https://cursophp.com.ar/" target="_blank"><strong>CAC FullStack</strong></a>
+                        </p>
+                        <p class="text-light text-end">
+                            Esta página web tiene un fin meramente educativo, por ahora.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+    </footer>
+    <!-- End Footer -->
+
+
+
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

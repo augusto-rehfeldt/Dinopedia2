@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Dinopedia</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Load Require CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="assets/css/boxicon.min.css" rel="stylesheet">
+    <!-- tipo de letra -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+		<!-- carga CSS -->
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light" 
+        style="position: sticky; padding: 0%; top: 0; width: 100%; z-index: 600; background-color: ghostwhite;">
+
+        <!--navbar-expand-lg = envoltorio para que el navbar se estire en lg
+        navbar-light = texto negro de la letra
+        bg-white = fondo de color blanco
+        -->
+    
+        <div class="container d-flex justify-content-between align-items-center">
+            
+            <a class="navbar-brand h1" href="index.html" style="justify-content: start; margin: 0%; padding-left: 1%; padding-right: 1%;">
+            <!--navbar-brand = clase se utiliza para resaltar la marca o logotipo de su página-->	
+                <img src="assets/img/dinosaur.png" style="width: 3em; margin: auto;">
+                <span class="text-dark" style="text-align: center; font-size: 24px;">Dinopedia</span>
+            </a>
+                
+            <!--	boton de hamburguesa --> 
+            <button class="navbar-toggler border-0" 
+                type="button" data-bs-toggle="collapse" 
+                data-bs-target="#navbar-toggler-success" 
+                aria-controls="navbarSupportedContent" 
+                aria-expanded="false" 
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>
+        
+            <!------------------------------------------- Opciones del Menu		-->
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" 
+		        id="navbar-toggler-success">
+            
+                <!-------collapse navbar-collapse= para agrupar y ocultar el contenido de la barra de navegación 
+                por un punto de interrupción principal.
+                flex-fill = obliga a que todos los elementos tengan el mismo tamaño de ancho
+                d-lg-flex = utilidades para crear un contenedor flexbox y transforme los elementos secundarios 
+                directos en elementos flexibles
+                -->
+                <div class="flex-fill mx-xl-5">
+            <!--	  mx=para clases que establecen tanto *-lefty*-right-->
+                    <ul class="nav navbar-nav d-flex justify-content-center text-center text-dark" style="margin: 0%; font-size: 20px;">
+                <!--   .navbar-nav para una navegación ligera y de altura completa 
+                    (incluida la compatibilidad con menús desplegables).-->
+                        <li class="nav-item active">
+                            <a class="nav-link btn-outline-primary px-3 py-4" href="index.html">Inicio</a>
+                        <!-- px = padding y mx es el margin 
+                        rounded-pill =genera ese boton con bordes redondeados rounded-circle-->	
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link btn-outline-primary px-3 py-4 dropdown-toggle" type="button" id="dropdownMenuButton1" 
+                                style="width: 100%;" data-bs-toggle="dropdown" aria-expanded="false">
+                                El mundo mesozoico
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="triasico.html">Triásico</a></li>
+                                <li><a class="dropdown-item" href="jurasico.html">Jurásico</a></li>
+                                <li><a class="dropdown-item" href="cretacico.html">Cretácico</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary py-4 px-3" href="enciclopedia.html">Dinosaurios de la A a la Z</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary py-4 px-3" href="paleoarte.html">Paleoarte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary py-4 px-3" href="foro.html">Foro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary py-4 px-3" href="tienda.html">Tienda</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar nav-fill align-self-center d-flex text-dark">
+                    <a class="nav-link btn-outline-primary px-3 dropdown-toggle" type="button" id="dropdownMenuButton3" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class='bx bxs-user-account bx-md'></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end" aria-labelledby="dropdownMenuButton3">
+                        <li><a class="dropdown-item" href="#">Ingresar</a></li>
+                        <li><a class="dropdown-item" href="#">Registrarse</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <!-- start frase -->
+
+    <section>
+
+        <div class="container-fluid bg-secondary" style="padding: 1%; padding-bottom: 0.5%;">
+            <figure class="text-center">
+                <blockquote class="blockquote text-light" >
+                  <h3>«Los dinosaurios pueden estar extintos de la faz del planeta, pero están vivos en nuestra imaginación»</h3>
+                </blockquote>
+                <figcaption class="blockquote-footer text-light">
+                    <cite title="Source Title">Steve Miller</cite>
+                </figcaption>
+              </figure>
+        </div>
+
+    </section>
+
+    <!-- end frase -->
+
+    <!-- start galería -->
+
+    <section style="margin: 2%" id="paleoarte">
+
+        <!-- Esto, en la práctica, lo haría de manera dinámica con una base de datos 
+            por el momento, haré unas cuantas filas de 2 imágenes cada una-->
+
+        <div class="row justify-content-center mb-4">
+
+            <div class="col-12 col-md-6 mb-3">
+
+                <div class="card">
+                    <a class="stretched-link" data-bs-toggle="modal" data-bs-target="#modal-1" style="cursor: pointer;"></a>
+                    <img class="card-img-top" src="assets/img/max-bellomio-rexerrrr2.jpg" alt="Card image"
+                        style="height: 25rem; object-fit: cover; width: 100%; overflow: hidden;">
+                    <div class="card-body" style="position: relative; z-index: 500;">
+                        <p class="card-text">Un Tiranosaurio Rex descansando bajo unos árboles // <a class="text-decoration-none" href="https://www.artstation.com/digitalduck">Max Bellomio</a></p>
+                    </div>
+                </div>
+
+                <!-- inicio modal -->
+
+                <div class="modal fade" id="modal-1" data-bs-keyboard="false" tabindex="-1" 
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="margin-top: -1%; margin-bottom: 20%;">
+                    <div class="modal-dialog" style="max-width: none; width: fit-content; max-width: 95%;">
+                        <div class="modal-content" style="background-color: rgba(32, 178, 171, 0);">
+                        <div class="modal-header" style="background-color: rgb(255, 255, 255);">
+                            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="padding: 0%;">
+                            <img src="assets/img/max-bellomio-rexerrrr2.jpg" alt="image" style="max-width: 100%;">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end modal -->
+
+            </div>
+
+            <div class="col-12 col-md-6 mb-3">
+
+                <div class="card">
+                    <a class="stretched-link" data-bs-toggle="modal" data-bs-target="#modal-2" style="cursor: pointer;"></a>
+                    <img class="card-img-top" src="assets/img/deinonychus_by_raphtor_dbj33vc-fullview.jpg" alt="Card image"
+                        style="height: 25rem; object-fit: cover; width: 100%; overflow: hidden;">
+                    <div class="card-body" style="position: relative; z-index: 500;">
+                        <p class="card-text">Una pareja de Deinonychus cazando // <a class="text-decoration-none" href="https://www.deviantart.com/raphtor">Raphtor</a></p>
+                    </div>
+                </div>
+
+                <!-- inicio modal -->
+
+                <div class="modal fade" id="modal-2" data-bs-keyboard="false" tabindex="-1" 
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="margin-top: -1%; margin-bottom: 20%;">
+                    <div class="modal-dialog" style="max-width: none; width: fit-content; max-width: 95%;">
+                        <div class="modal-content" style="background-color: rgba(32, 178, 171, 0);">
+                        <div class="modal-header" style="background-color: rgb(255, 255, 255);">
+                            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="padding: 0%;">
+                            <img src="assets/img/deinonychus_by_raphtor_dbj33vc-fullview.jpg" alt="image" style="max-width: 100%;">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end modal -->
+
+            </div>
+            
+        </div>
+        <div class="row justify-content-center mb-4">
+
+            <div class="col-12 col-md-6 mb-3">
+
+                <div class="card">
+                    <a class="stretched-link" data-bs-toggle="modal" data-bs-target="#modal-3" style="cursor: pointer;"></a>
+                    <img class="card-img-top" src="assets/img/caudipteryx_with_chicks_by_ewilloughby_daz6h9q-pre.jpg" alt="Card image"
+                        style="height: 25rem; object-fit: cover; width: 100%; overflow: hidden;">
+                    <div class="card-body" style="position: relative; z-index: 500;">
+                        <p class="card-text"><i>Caudipteryx con sus polluelos</i> // <a class="text-decoration-none" href="https://www.deviantart.com/ewilloughby">EWilloughby</a></p>
+                    </div>
+                </div>
+
+                <!-- inicio modal -->
+
+                <div class="modal fade" id="modal-3" data-bs-keyboard="false" tabindex="-1" 
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="margin-top: -1%; margin-bottom: 20%;">
+                    <div class="modal-dialog" style="max-width: none; width: fit-content; max-width: 95%;">
+                        <div class="modal-content" style="background-color: rgba(32, 178, 171, 0);">
+                        <div class="modal-header" style="background-color: rgb(255, 255, 255);">
+                            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="padding: 0%;">
+                            <img src="assets/img/caudipteryx_with_chicks_by_ewilloughby_daz6h9q-pre.jpg" alt="image" style="max-width: 100%;">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end modal -->
+
+            </div>
+
+            <div class="col-12 col-md-6 mb-3">
+
+                <div class="card">
+                    <a class="stretched-link" data-bs-toggle="modal" data-bs-target="#modal-4" style="cursor: pointer;"></a>
+                    <img class="card-img-top" src="assets/img/d6lj4n4-276f0e84-1538-485b-a60c-e03a3db7f5e3.jpg" alt="Card image"
+                        style="height: 25rem; object-fit: cover; width: 100%; overflow: hidden;">
+                    <div class="card-body" style="position: relative; z-index: 500;">
+                        <p class="card-text">Un Eucoelophysis es atacado por un Redondasaurus, un fitosaurio // <a class="text-decoration-none" href="https://www.deviantart.com/apsaravis">Apsaravis</a></p>
+                    </div>
+                </div>
+
+                <!-- inicio modal -->
+
+                <div class="modal fade" id="modal-4" data-bs-keyboard="false" tabindex="-1" 
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="margin-top: -1%; margin-bottom: 20%;">
+                    <div class="modal-dialog" style="max-width: none; width: fit-content; max-width: 95%;">
+                        <div class="modal-content" style="background-color: rgba(32, 178, 171, 0);">
+                        <div class="modal-header" style="background-color: rgb(255, 255, 255);">
+                            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="padding: 0%;">
+                            <img src="assets/img/d6lj4n4-276f0e84-1538-485b-a60c-e03a3db7f5e3.jpg" alt="image" style="max-width: 100%;">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end modal -->
+
+            </div>
+
+        </div>
+        
+
+        <div class="row justify-content-center mb-4">
+
+            <div class="col-12 col-md-6 mb-3">
+
+                <div class="card">
+                    <a class="stretched-link" data-bs-toggle="modal" data-bs-target="#modal-5" style="cursor: pointer;"></a>
+                    <img class="card-img-top" src="assets/img/dahtjbv-427132e1-2fdb-4c15-a63b-223f8100722a.jpg" alt="Card image"
+                        style="height: 25rem; object-fit: cover; width: 100%; overflow: hidden; object-position: bottom;">
+                    <div class="card-body" style="position: relative; z-index: 500;">
+                        <p class="card-text"><i>Archaeopteryx</i> // <a class="text-decoration-none" href="https://www.deviantart.com/swordlord3d">Vlad Konstantinov</a></p>
+                    </div>
+                </div>
+
+                <!-- inicio modal -->
+
+                    <div class="modal fade" id="modal-5" data-bs-keyboard="false" tabindex="-1" 
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="margin-top: -1%; margin-bottom: 20%;">
+                    <div class="modal-dialog" style="max-width: none; width: fit-content; max-width: 95%;">
+                        <div class="modal-content" style="background-color: rgba(32, 178, 171, 0);">
+                        <div class="modal-header" style="background-color: rgb(255, 255, 255);">
+                            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="padding: 0%;">
+                            <img src="assets/img/dahtjbv-427132e1-2fdb-4c15-a63b-223f8100722a.jpg" alt="image" style="max-width: 100%;">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end modal -->
+
+            </div>
+            
+            <div class="col-12 col-md-6 mb-3">
+
+                <div class="card">
+                    <a class="stretched-link" data-bs-toggle="modal" data-bs-target="#modal-6" style="cursor: pointer;"></a>
+                    <img class="card-img-top" src="assets/img/nBgdc1N.jpeg" alt="Card image"
+                        style="height: 25rem; object-fit: cover; width: 100%; overflow: hidden;">
+                    <div class="card-body" style="position: relative; z-index: 500;">
+                        <p class="card-text">Dos dinosaurios caminan por el desierto // <a class="text-decoration-none" href="https://www.simonstalenhag.se/paleo.html">Simon Stalenhag</a></p>
+                    </div>
+                </div>
+
+                <!-- inicio modal -->
+
+                <div class="modal fade" id="modal-6" data-bs-keyboard="false" tabindex="-1" 
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="margin-top: -1%; margin-bottom: 20%;">
+                    <div class="modal-dialog" style="max-width: none; width: fit-content; max-width: 95%;">
+                        <div class="modal-content" style="background-color: rgba(32, 178, 171, 0);">
+                        <div class="modal-header" style="background-color: rgb(255, 255, 255);">
+                            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="padding: 0%;">
+                            <img src="assets/img/nBgdc1N.jpeg" alt="image" style="max-width: 100%;">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end modal -->
+
+            </div>
+            
+        </div>
+        <div class="row justify-content-center mb-4">
+
+            <div class="col-12 col-md-6 mb-3">
+
+                <div class="card">
+                    <a class="stretched-link" data-bs-toggle="modal" data-bs-target="#modal-7" style="cursor: pointer;"></a>
+                    <img class="card-img-top" src="assets/img/bajadasaurus_by_raphtor_dcz6k2v-fullview.jpg" alt="Card image"
+                        style="height: 25rem; object-fit: cover; width: 100%; overflow: hidden;">
+                    <div class="card-body" style="position: relative; z-index: 500;">
+                        <p class="card-text"><i>Bajadasaurus</i> // <a class="text-decoration-none" href="https://www.deviantart.com/raphtor">Raphtor</a></p>
+                    </div>
+                </div>
+
+                <!-- inicio modal -->
+
+                <div class="modal fade" id="modal-7" data-bs-keyboard="false" tabindex="-1" 
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="margin-top: -1%; margin-bottom: 20%;">
+                    <div class="modal-dialog" style="max-width: none; width: fit-content; max-width: 95%;">
+                        <div class="modal-content" style="background-color: rgba(32, 178, 171, 0);">
+                        <div class="modal-header" style="background-color: rgb(255, 255, 255);">
+                            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="padding: 0%;">
+                            <img src="assets/img/bajadasaurus_by_raphtor_dcz6k2v-fullview.jpg" alt="image" style="max-width: 100%;">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end modal -->
+
+            </div>
+           
+            <div class="col-12 col-md-6 mb-3">
+
+                <div class="card">
+                    <a class="stretched-link" data-bs-toggle="modal" data-bs-target="#modal-8" style="cursor: pointer;"></a>
+                    <img class="card-img-top" src="assets/img/ankylosaurs_by_deskridge_dcvqlpc-pre.jpg" alt="Card image"
+                        style="height: 25rem; object-fit: cover; width: 100%; overflow: hidden;">
+                    <div class="card-body" style="position: relative; z-index: 500;">
+                        <p class="card-text"><i>Ankylosaurios</i> // <a class="text-decoration-none" href="https://www.deviantart.com/deskridge">Deskridge</a></p>
+                    </div>
+                </div>
+
+                <!-- inicio modal -->
+
+                <div class="modal fade" id="modal-8" data-bs-keyboard="false" tabindex="-1" 
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="margin-top: -1%; margin-bottom: 20%;">
+                    <div class="modal-dialog" style="max-width: none; width: fit-content; max-width: 95%;">
+                        <div class="modal-content" style="background-color: rgba(32, 178, 171, 0);">
+                        <div class="modal-header" style="background-color: rgb(255, 255, 255);">
+                            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="padding: 0%;">
+                            <img src="assets/img/ankylosaurs_by_deskridge_dcvqlpc-pre.jpg" alt="image" style="max-width: 100%;">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end modal -->
+
+            </div>
+            
+        </div>
+        
+        <div class="row justify-content-center mb-4">
+
+            <div class="col-12 col-md-6 mb-3">
+
+                <div class="card">
+                    <a class="stretched-link" data-bs-toggle="modal" data-bs-target="#modal-9" style="cursor: pointer;"></a>
+                    <img class="card-img-top" src="assets/img/styracosaurus_by_deskridge_d8td2m0-fullview.jpg" alt="Card image"
+                        style="height: 25rem; object-fit: cover; width: 100%; overflow: hidden; object-position: top;">
+                    <div class="card-body" style="position: relative; z-index: 500;">
+                        <p class="card-text"><i>Styracosaurus</i> // <a class="text-decoration-none" href="https://www.deviantart.com/deskridge">Deskridge</a></p>
+                    </div>
+                </div>
+
+                <!-- inicio modal -->
+
+                <div class="modal fade" id="modal-9" data-bs-keyboard="false" tabindex="-1" 
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="margin-top: -1%; margin-bottom: 20%;">
+                    <div class="modal-dialog" style="max-width: none; width: fit-content;max-width: 95%;">
+                        <div class="modal-content" style="background-color: rgba(32, 178, 171, 0);">
+                        <div class="modal-header" style="background-color: rgb(255, 255, 255);">
+                            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="padding: 0%;">
+                            <img src="assets/img/styracosaurus_by_deskridge_d8td2m0-fullview.jpg" alt="image" style="max-width: 100%;">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end modal -->
+
+            </div>
+
+            <div class="col-12 col-md-6 mb-3">
+
+                <div class="card">
+                    <a class="stretched-link" data-bs-toggle="modal" data-bs-target="#modal-10" style="cursor: pointer;"></a>
+                    <img class="card-img-top" src="assets/img/the_chase_by_thesax66_d8ac1lq-pre.jpg" alt="Card image"
+                        style="height: 25rem; object-fit: cover; width: 100%; overflow: hidden;">
+                    <div class="card-body" style="position: relative; z-index: 500;">
+                        <p class="card-text"><i>Persecución</i> // <a class="text-decoration-none" href="https://www.deviantart.com/thesax66">TheSax66</a></p>
+                    </div>
+                </div>
+
+                <!-- inicio modal -->
+
+                <div class="modal fade" id="modal-10" data-bs-keyboard="false" tabindex="-1" 
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="margin-top: -1%; margin-bottom: 20%;">
+                    <div class="modal-dialog" style="max-width: none; width: fit-content; max-width: 95%;">
+                        <div class="modal-content" style="background-color: rgba(32, 178, 171, 0);">
+                        <div class="modal-header" style="background-color: rgb(255, 255, 255);">
+                            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="padding: 0%;">
+                            <img src="assets/img/the_chase_by_thesax66_d8ac1lq-pre.jpg" alt="image" style="max-width: 100%;">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end modal -->
+
+            </div>
+            
+        </div>
+
+        
+        <div class="row justify-content-center mb-4">
+
+            <div class="col-12 col-md-6 mb-3">
+
+                <div class="card">
+                    <a class="stretched-link" data-bs-toggle="modal" data-bs-target="#modal-11" style="cursor: pointer;"></a>
+                    <img class="card-img-top" src="assets/img/kentrosaurus_aethiopicus_by_microcosmicecology_d9josq6-pre.jpg" alt="Card image"
+                        style="height: 25rem; object-fit: cover; width: 100%; overflow: hidden;">
+                    <div class="card-body" style="position: relative; z-index: 500;">
+                        <p class="card-text"><i>Kentrosaurus aethiopicus</i> // <a class="text-decoration-none" href="https://www.deviantart.com/microcosmicecology">MicrocosmicEcology</a></p>
+                    </div>
+                </div>
+
+                <!-- inicio modal -->
+
+                <div class="modal fade" id="modal-11" data-bs-keyboard="false" tabindex="-1" 
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="margin-top: -1%; margin-bottom: 20%;">
+                    <div class="modal-dialog" style="max-width: none; width: fit-content; max-width: 95%;">
+                        <div class="modal-content" style="background-color: rgba(32, 178, 171, 0);">
+                        <div class="modal-header" style="background-color: rgb(255, 255, 255);">
+                            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="padding: 0%;">
+                            <img src="assets/img/kentrosaurus_aethiopicus_by_microcosmicecology_d9josq6-pre.jpg" alt="image" style="max-width: 100%;">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end modal -->
+
+            </div>
+            
+            <div class="col-12 col-md-6 mb-3">
+
+                <div class="card">
+                    <a class="stretched-link" data-bs-toggle="modal" data-bs-target="#modal-12" style="cursor: pointer;"></a>
+                    <img class="card-img-top" src="assets/img/saurian_art___acheroraptor_by_raphtor_dcvfcaa-fullview.jpg" alt="Card image"
+                        style="height: 25rem; object-fit: cover; width: 100%; overflow: hidden; object-position: bottom;">
+                    <div class="card-body" style="position: relative; z-index: 500;">
+                        <p class="card-text">Acheroraptors cazando un pequeño mamífero // <a class="text-decoration-none" href="https://www.deviantart.com/raphtor">Raphtor</a></p>
+                    </div>
+                </div>
+
+                <!-- inicio modal -->
+
+                <div class="modal fade" id="modal-12" data-bs-keyboard="false" tabindex="-1" 
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="margin-top: -1%; margin-bottom: 20%;">
+                    <div class="modal-dialog" style="max-width: none; width: fit-content; max-width: 95%;">
+                        <div class="modal-content" style="background-color: rgba(32, 178, 171, 0);">
+                        <div class="modal-header" style="background-color: rgb(255, 255, 255);">
+                            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="padding: 0%;">
+                            <img src="assets/img/saurian_art___acheroraptor_by_raphtor_dcvfcaa-fullview.jpg" alt="image" style="max-width: 100%;">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end modal -->
+
+            </div>
+            
+        </div>
+
+        <div class="row justify-content-center mb-4">
+
+            <div class="col-12 col-md-6 mb-3">
+
+                <div class="card">
+                    <a class="stretched-link" data-bs-toggle="modal" data-bs-target="#modal-13" style="cursor: pointer;"></a>
+                    <img class="card-img-top" src="assets/img/942109fc6f82668309a2e36b010abfc1.jpg" alt="Card image"
+                        style="height: 25rem; object-fit: cover; width: 100%; overflow: hidden;">
+                    <div class="card-body" style="position: relative; z-index: 500;">
+                        <p class="card-text">Parasaurolophus // <a class="text-decoration-none" href="https://daniel-eskridge.pixels.com/collections/paleoart">Daniel Eskridge</a></p>
+                    </div>
+                </div>
+
+                <!-- inicio modal -->
+
+                <div class="modal fade" id="modal-13" data-bs-keyboard="false" tabindex="-1" 
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="margin-top: -1%;">
+                    <div class="modal-dialog" style="max-width: none; width: fit-content; max-width: 95%;">
+                        <div class="modal-content" style="background-color: rgba(32, 178, 171, 0);">
+                        <div class="modal-header" style="background-color: rgb(255, 255, 255);">
+                            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="padding: 0%;">
+                            <img src="assets/img/942109fc6f82668309a2e36b010abfc1.jpg" alt="image" style="max-width: 100%;">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end modal -->
+
+            </div>
+            
+            <div class="col-12 col-md-6 mb-3">
+
+                <div class="card">
+                    <a class="stretched-link" data-bs-toggle="modal" data-bs-target="#modal-14" style="cursor: pointer;"></a>
+                    <img class="card-img-top" src="assets/img/4fb2f798c4ed42f0e497f80ab60249dd.jpg" alt="Card image"
+                        style="height: 25rem; object-fit: cover; width: 100%; overflow: hidden; object-position: top;">
+                    <div class="card-body" style="position: relative; z-index: 500;">
+                        <p class="card-text">Una Spinosaurus protege sus huevos de unos Araripesuchus // <a class="text-decoration-none" href="http://www.davidebonadonna.it/">Davide Bonadonna</a></p>
+                    </div>
+                </div>
+
+                <!-- inicio modal -->
+
+                <div class="modal fade" id="modal-14" data-bs-keyboard="false" tabindex="-1" 
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="margin-top: -1%;">
+                    <div class="modal-dialog" style="max-width: none; width: fit-content; max-width: 95%;">
+                      <div class="modal-content" style="background-color: rgba(32, 178, 171, 0);">
+                        <div class="modal-header" style="background-color: rgb(255, 255, 255);">
+                          <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="padding: 0%;">
+                            <img src="assets/img/4fb2f798c4ed42f0e497f80ab60249dd.jpg" alt="image" style="max-width: 100%;">
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <!-- end modal -->
+
+            </div>
+            
+        </div>
+
+        <div class="row justify-content-center mb-4">
+
+            <div class="col-12 col-md-6 mb-3">
+
+                <div class="card">
+                    <a class="stretched-link" data-bs-toggle="modal" data-bs-target="#modal-15" style="cursor: pointer;"></a>
+                    <img class="card-img-top" src="assets/img/d7zmc3d-9f5b2b29-96aa-4ec3-ab98-1dbe89cc625c.jpg" alt="Card image"
+                        style="height: 25rem; object-fit: cover; width: 100%; overflow: hidden; object-position: top;">
+                    <div class="card-body" style="position: relative; z-index: 500;">
+                        <p class="card-text">Therizinosaurus // <a class="text-decoration-none" href="https://www.deviantart.com/swordlord3d">Swordlord3d</a></p>
+                    </div>
+                </div>
+
+                <!-- inicio modal -->
+
+                <div class="modal fade" id="modal-15" data-bs-keyboard="false" tabindex="-1" 
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="margin-top: -1%;">
+                    <div class="modal-dialog" style="max-width: none; width: fit-content; max-width: 95%;">
+                        <div class="modal-content" style="background-color: rgba(32, 178, 171, 0);">
+                        <div class="modal-header" style="background-color: rgb(255, 255, 255);">
+                            <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="padding: 0%;">
+                            <img src="assets/img/d7zmc3d-9f5b2b29-96aa-4ec3-ab98-1dbe89cc625c.jpg" alt="image" style="max-width: 100%;">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- end modal -->
+
+            </div>
+            
+            <div class="col-12 col-md-6 mb-3">
+
+                <div class="card">
+                    <a class="stretched-link" data-bs-toggle="modal" data-bs-target="#modal-16" style="cursor: pointer;"></a>
+                    <img class="card-img-top" src="assets/img/nasutuceratops_titusi_by_olorotitan_d47ys2p-fullview.jpg" alt="Card image"
+                        style="height: 25rem; object-fit: cover; width: 100%; overflow: hidden; object-position: top;">
+                    <div class="card-body" style="position: relative; z-index: 500;">
+                        <p class="card-text"><i>Nasutuceratops titusi</i> // <a class="text-decoration-none" href="https://www.deviantart.com/olorotitan">Andrey Atuchin</a></p>
+                    </div>
+                </div>
+
+                <!-- inicio modal -->
+
+                <div class="modal fade" id="modal-16" data-bs-keyboard="false" tabindex="-1" 
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true" style="margin-top: -1%;">
+                    <div class="modal-dialog" style="max-width: none; width: fit-content; max-width: 95%;">
+                      <div class="modal-content" style="background-color: rgba(32, 178, 171, 0);">
+                        <div class="modal-header" style="background-color: rgb(255, 255, 255);">
+                          <h5 class="modal-title" id="staticBackdropLabel"></h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body" style="padding: 0%;">
+                            <img src="assets/img/nasutuceratops_titusi_by_olorotitan_d47ys2p-fullview.jpg" alt="image" style="max-width: 100%;">
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <!-- end modal -->
+
+            </div>
+            
+        </div>
+        
+    </section>
+
+    <!-- end galería -->
+
+    <!-- start page index -->
+
+    <nav aria-label="Page navigation example" style="display: flex; justify-content: center;">
+        <ul class="pagination">
+            <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only"></span>
+            </a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only"></span>
+            </a>
+            </li>
+        </ul>
+        </nav>
+
+    <!-- end page index -->
+
+    <!-- Start Footer -->
+    <footer class="bg-secondary">
+
+        <div class="container">
+            <div class="row bg-secondary justify-content-center py-2">
+                <div class="col-12 col-sm-6 col-md-3 text-start">
+                    <a class="text-decoration-none" href="index.html">
+                        <h2 class="text-light">Dinopedia</h2>
+                    </a>
+                    <p class="text-light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, voluptate sed.</p>
+                    <ul class="list-unstyled text-light">
+                        <li>
+                            <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-light py-1" 
+                            href="tel:012-3456-7890">012-3456-7890</a>
+                        </li>
+                        <li>
+                            <i class='bx-fw bx bx-mail-send bx-xs'></i><a class="text-decoration-none text-light py-1"
+                            href="mailto:dinopedia.contacto@gmail.com">dinopedia.contacto@gmail.com</a>
+                        </li>
+                    </ul>
+                    <ul class="list-inline footer-icons light-300">
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="http://facebook.com">
+                                <i class='bx bxl-facebook-square bx-md'></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="http://twitter.com">
+                                <i class='bx bxl-twitter bx-md'></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="http://instagram.com">
+                                <i class='bx bxl-instagram bx-md'></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="https://web.telegram.org/#/login">
+                                <i class='bx bxl-telegram bx-md'></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-2 text-start">
+                    <h2 class="text-light">Enlaces</h2>
+                    <ul class="list-unstyled text-light">
+                        <li>
+                            <a class="text-decoration-none text-light" href="index.html">
+                                Inicio
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="triasico.html">
+                                El mundo mesozoico
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="enciclopedia.html">
+                                Dinosaurios de la A a la Z
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="paleoarte.html">
+                                Paleoarte
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="foro.html">
+                                Foro
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-2 text-start">
+                    <h2 class="text-light">Tienda</h2>
+                    <ul class="list-unstyled text-light">
+                        <li>
+                            <a class="text-decoration-none text-light" href="#">
+                                Ropa
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="#">
+                                Accesorios
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="#">
+                                Pósters
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="#">
+                                Rompecabezas
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="#">
+                                Juguetes
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-5 text-light text-start">
+                    <h2 class="text-light">Suscríbase a nuestra newsletter</h2>
+                    <form action="#" method="POST">
+                        <div class="form-row d-flex flex-fill">
+                            <input class="form-control" type="email" placeholder="Ingrese su e-mail" required>
+                            <input class="btn btn-primary" type="submit" value="Suscribirse">
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 bg-primary">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-12 col-sm-6">
+                        <p class="text-lg-start text-center text-light light-300">
+                            © Copyright 2021 Dinopedia. Todos los derechos reservados.
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <p class="text-lg-end text-center text-light light-300">
+                            Diseñado por <a rel="sponsored" class="text-decoration-none text-light" 
+                            href="https://www.linkedin.com/in/augusto-rehfeldt-9aa01320a/" target="_blank"><strong>Augusto Rehfeldt</strong></a> y <a rel="sponsored" class="text-decoration-none text-light" 
+                            href="https://cursophp.com.ar/" target="_blank"><strong>CAC FullStack</strong></a>
+                        </p>
+                        <p class="text-light text-end">
+                            Esta página web tiene un fin meramente educativo, por ahora.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,2225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dinopedia</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Load Require CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font CSS -->
+    <link href="assets/css/boxicon.min.css" rel="stylesheet">
+    <!-- tipo de letra -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <!-- carga CSS -->
+    <link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light"
+        style="position: sticky; padding: 0%; top: 0; width: 100%; z-index: 600; background-color: ghostwhite;">
+
+        <!--navbar-expand-lg = envoltorio para que el navbar se estire en lg
+        navbar-light = texto negro de la letra
+        bg-white = fondo de color blanco
+        -->
+
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand h1" href="index.html"
+                style="justify-content: start; margin: 0%; padding-left: 1%; padding-right: 1%;">
+                <!--navbar-brand = clase se utiliza para resaltar la marca o logotipo de su página-->
+                <img src="assets/img/dinosaur.png" style="width: 3em; margin: auto;">
+                <span class="text-dark" style="text-align: center; font-size: 24px;">Dinopedia</span>
+            </a>
+
+            <!--	boton de hamburguesa -->
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>
+
+            <!------------------------------------------- Opciones del Menu		-->
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+                id="navbar-toggler-success">
+
+                <!-------collapse navbar-collapse= para agrupar y ocultar el contenido de la barra de navegación 
+                por un punto de interrupción principal.
+                flex-fill = obliga a que todos los elementos tengan el mismo tamaño de ancho
+                d-lg-flex = utilidades para crear un contenedor flexbox y transforme los elementos secundarios 
+                directos en elementos flexibles
+                -->
+                <div class="flex-fill mx-xl-5">
+                    <!--	  mx=para clases que establecen tanto *-lefty*-right-->
+                    <ul class="nav navbar-nav d-flex justify-content-center text-center text-dark"
+                        style="margin: 0%; font-size: 20px;">
+                        <!--   .navbar-nav para una navegación ligera y de altura completa 
+                    (incluida la compatibilidad con menús desplegables).-->
+                        <li class="nav-item active">
+                            <a class="nav-link btn-outline-primary px-3 py-4" href="index.html">Inicio</a>
+                            <!-- px = padding y mx es el margin 
+                        rounded-pill =genera ese boton con bordes redondeados rounded-circle-->
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link btn-outline-primary px-3 py-4 dropdown-toggle" type="button"
+                                id="dropdownMenuButton1" style="width: 100%;" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                El mundo mesozoico
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <li><a class="dropdown-item" href="triasico.html">Triásico</a></li>
+                                <li><a class="dropdown-item" href="jurasico.html">Jurásico</a></li>
+                                <li><a class="dropdown-item" href="cretacico.html">Cretácico</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary py-4 px-3" href="enciclopedia.html">Dinosaurios de la
+                                A a la Z</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary py-4 px-3" href="paleoarte.html">Paleoarte</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary py-4 px-3" href="foro.html">Foro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary py-4 px-3" href="tienda.html">Tienda</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar nav-fill align-self-center d-flex text-dark">
+                    <a class="nav-link btn-outline-primary px-3 dropdown-toggle" type="button" id="dropdownMenuButton3"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class='bx bxs-user-account bx-md'></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end"
+                        aria-labelledby="dropdownMenuButton3">
+                        <li><a class="dropdown-item" href="#">Ingresar</a></li>
+                        <li><a class="dropdown-item" href="#">Registrarse</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->
+
+    <!-- start timeline desktop -->
+
+    <section id="linea-tiempo-desktop">
+
+        <div class="row p-0 m-0 justify-content-center w-100" >
+            <div class="col-1 d-flex p-0 align-items-center"
+                style="background-color: rgb(116, 154, 224);">
+                <h4 class="text-dark text-center w-100 m-0">Era paleozoica</h4>
+            </div>
+            <div class="col-10 d-flex p-0">
+
+                <!--1-->
+
+                <div class="col-1 d-flex p-0" style="background-color: lightcoral;">
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                </div>
+
+                <!--2-->
+
+                <div class="col-1 d-flex p-0" style="background-color: lightcoral;">
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                    <div class="col-3 d-flex justify-content-center align-items-center p-0">
+                        <h3 class="h3 text-light m-0" style="z-index: 500;">Triásico</h3>
+                    </div>
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                </div>
+
+                <!--3-->
+
+                <div class="col-1 d-flex p-0" style="background-color: lightcoral;">
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                </div>
+
+                <!--4-->
+
+                <div class="col-1 d-flex p-0" style="background-color: MediumSeaGreen;">
+
+                    <div class="col-1 d-flex p-0" style="background-color: lightcoral;"></div>
+                    <div class="col-1 d-flex p-0" style="background-color: lightcoral;"></div>
+                    <div class="col-1 d-flex p-0" style="background-color: lightcoral;"></div>
+                    <div class="col-1 d-flex p-0" style="background-color: lightcoral;"></div>
+
+                    <!-- Fin triásico -->
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                </div>
+
+                <!--5-->
+
+                <div class="col-1 d-flex p-0" style="background-color: MediumSeaGreen;">
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                </div>
+
+                <!--6-->
+
+                <div class="col-1 d-flex p-0" style="background-color: MediumSeaGreen;">
+
+                    <div class="col-3 d-flex justify-content-center align-items-center p-0">
+                        <h3 class="h3 text-light m-0" style="z-index: 500;">Jurásico</h3>
+                    </div>
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                </div>
+
+                <!--7-->
+
+                <div class="col-1 d-flex p-0" style="background-color: MediumSeaGreen;">
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                    <!-- Fin jurásico -->
+
+                </div>
+
+                <!--8-->
+
+                <div class="col-1 d-flex p-0" style="background-color: lightseagreen;">
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                </div>
+
+                <!--9-->
+
+                <div class="col-1 d-flex p-0" style="background-color: lightseagreen;">
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                </div>
+
+                <!--10-->
+
+                <div class="col-1 d-flex p-0" style="background-color: lightseagreen;">
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                    <div class="col-2 d-flex justify-content-center align-items-center p-0">
+                        <h3 class="h3 text-light m-0" style="z-index: 500;">Cretácico</h3>
+                    </div>
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                </div>
+
+                <!--11-->
+
+                <div class="col-1 d-flex p-0" style="background-color: lightseagreen;">
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                </div>
+
+                <!--12-->
+
+                <div class="col-1 d-flex p-0" style="background-color: lightseagreen;">
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                </div>
+
+            </div>
+            <div class="col-1 d-flex p-0 align-items-center" style="background-color: rgb(221, 247, 173);">
+                <h4 class="text-dark text-center w-100 m-0" style="overflow: hidden;">Era cenozoica</h4>
+            </div>
+        </div>
+
+        <div class="row p-0 m-0 w-100" style="height: 600px;">
+            <div class="col-1 d-flex border-bottom border-end p-0" style="background-color: honeydew;">
+
+            </div>
+            <div class="col-10 d-flex flex-fill border-bottom p-0" style="background-color: azure;">
+
+                <!--1-->
+
+                <div class="col-1 d-flex p-0">
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                    <!-- 235 millones de años -->
+
+                </div>
+
+                <!--2-->
+
+                <div class="col-1 d-flex p-0">
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                    <!-- 220 millones de años -->
+
+                </div>
+
+                <!--3-->
+
+                <div class="col-1 d-flex p-0">
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                    <!-- 205 millones de años -->
+
+                </div>
+
+                <!--4-->
+
+                <div class="col-1 d-flex p-0">
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex border-end p-0"></div>
+
+                    <!-- Fin triásico -->
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                    <!-- 190 millones de años -->
+
+                </div>
+
+                <!--5-->
+
+                <div class="col-1 d-flex p-0">
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                    <!-- 175 millones de años -->
+
+                </div>
+
+                <!--6-->
+
+                <div class="col-1 d-flex p-0">
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                    <!-- 160 millones de años -->
+
+                </div>
+
+                <!--7-->
+
+                <div class="col-1 d-flex p-0">
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0 border-end"></div>
+
+                    <!-- Fin jurásico -->
+
+                </div>
+
+                <!--8-->
+
+                <div class="col-1 d-flex p-0">
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                    <!-- 130 millones de años -->
+
+                </div>
+
+                <!--9-->
+
+                <div class="col-1 d-flex p-0">
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                    <!-- 115 millones de años -->
+
+                </div>
+
+                <!--10-->
+
+                <div class="col-1 d-flex p-0">
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                    <!-- 100 millones de años -->
+
+                </div>
+
+                <!--11-->
+
+                <div class="col-1 d-flex p-0">
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+
+                    <!-- 85 millones de años -->
+
+                </div>
+
+                <!--12-->
+
+                <div class="col-1 d-flex p-0">
+
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0"></div>
+                    <div class="col-1 d-flex p-0 border-end"></div>
+
+                    <!-- fin cretácico -->
+
+                </div>
+
+
+
+            </div>
+            <div class="col-1 d-flex border-bottom p-0" style="background-color: honeydew;">
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- end timeline desktop -->   
+
+    <!-- start timeline celular -->
+
+    <section id="linea-tiempo-celular">
+
+        <div class="row" style="margin-right: 0%;">
+            <!-- paleozoico -->
+            <div class="col-12 d-flex" style="height: 1em; background-color: honeydew; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: rgb(116, 154, 224);"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: honeydew; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: rgb(116, 154, 224);"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: honeydew; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: rgb(116, 154, 224);"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: honeydew; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: rgb(116, 154, 224);"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: honeydew; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: rgb(116, 154, 224);"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 2em; background-color: honeydew; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1 d-flex justify-content-center align-items-center" style="background-color: rgb(116, 154, 224); z-index: 500;">
+                    <span class="text-dark" id="texto-linea-tiempo-celular">Era paleozoica</span>
+                </div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: honeydew; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: rgb(116, 154, 224);"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: honeydew; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: rgb(116, 154, 224);"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: honeydew; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: rgb(116, 154, 224);"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: honeydew; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: rgb(116, 154, 224);"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: honeydew; padding-right: 0%;">
+                <div class="col-10 col-sm-11 border-bottom">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: rgb(116, 154, 224);"></div>
+            </div>
+
+            <!-- 1 -->
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+
+            <!-- 2 -->
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 3em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1 d-flex justify-content-center align-items-center" style="background-color: indianred; z-index: 500;">
+                    <span class="text-light" id="texto-linea-tiempo-celular" style="font-size: 2em;">Triásico</span>
+                </div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+
+            <!-- 3 -->
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+
+            <!-- 4 -->
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11 border-bottom">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: indianred;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+
+            <!-- 5 -->
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+
+            <!-- 6 -->
+            <div class="col-12 d-flex" style="height: 3em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1 d-flex justify-content-center align-items-center" style="background-color: mediumseagreen; z-index: 500;">
+                    <span class="text-light" id="texto-linea-tiempo-celular" style="font-size: 2em;">Jurásico</span>
+                </div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+
+            <!-- 7 -->
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11 border-bottom">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: mediumseagreen;"></div>
+            </div>
+            
+            <!-- 8 -->
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            
+            <!-- 9 -->
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+
+            <!-- 10 -->
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 2em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1 d-flex justify-content-center align-items-center" style="background-color: lightseagreen; z-index: 500;">
+                    <span class="text-light" id="texto-linea-tiempo-celular" style="font-size: 2em;">Cretácico</span>
+                </div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+
+            <!-- 11 -->
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+
+            <!-- 12 -->
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: azure; padding-right: 0%;">
+                <div class="col-10 col-sm-11 border-bottom">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: lightseagreen;"></div>
+            </div>
+
+            <!-- cenozoico -->
+            <div class="col-12 d-flex" style="height: 1em; background-color: honeydew; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: rgb(221, 247, 173);"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: honeydew; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: rgb(221, 247, 173);"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: honeydew; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: rgb(221, 247, 173);"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: honeydew; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: rgb(221, 247, 173);"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: honeydew; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: rgb(221, 247, 173);"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 2em; background-color: honeydew; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1 d-flex justify-content-center align-items-center" style="background-color: rgb(221, 247, 173);; z-index: 500;">
+                    <span class="text-dark" id="texto-linea-tiempo-celular">Era cenozoica</span>
+                </div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: honeydew; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: rgb(221, 247, 173);"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: honeydew; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: rgb(221, 247, 173);"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: honeydew; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: rgb(221, 247, 173);"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: honeydew; padding-right: 0%;">
+                <div class="col-10 col-sm-11">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: rgb(221, 247, 173);"></div>
+            </div>
+            <div class="col-12 d-flex" style="height: 1em; background-color: honeydew; padding-right: 0%;">
+                <div class="col-10 col-sm-11 border-bottom">
+
+                </div>
+                <div class="col-2 col-sm-1" style="background-color: rgb(221, 247, 173);"></div>
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+    <!-- end timeline celular -->  
+
+    <!-- start texto -->
+
+    <section style="margin: 2%;">
+
+        <h1>Lorem ipsum</h1>
+
+        <p class="texto-articulo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, laboriosam quaerat
+            accusamus, earum voluptatum quae, id eveniet officiis impedit dolorem voluptate fugiat. Dolor sequi sit
+            exercitationem nostrum nisi vel cum earum enim corporis! Expedita beatae facere, iure explicabo veritatis,
+            molestiae delectus, quaerat maiores blanditiis laboriosam voluptatibus tenetur aperiam repellendus commodi
+            nesciunt ad temporibus ut quas repellat officia vel quam reiciendis odio consectetur. Delectus rem quia
+            error laudantium a voluptates deleniti pariatur? Maiores veniam nemo doloremque quod a sint veritatis aut
+            quo provident sit quaerat id dicta autem, eveniet quas error laudantium beatae ipsam inventore tempora
+            reprehenderit minima ullam. Voluptatibus velit minus ipsam omnis? Impedit explicabo a ad nostrum tempore
+            sapiente, odit error? Hic id ab adipisci vero dolore expedita reprehenderit quo saepe facilis odit itaque
+            error eaque ipsum vel laboriosam at quod porro praesentium, totam voluptate magni nisi eveniet. A, ea illum
+            mollitia provident pariatur iusto ducimus quibusdam. Nulla, inventore. Sunt, rerum incidunt. Magnam, quos
+            nam nostrum esse vitae ex laborum nisi repellendus laudantium dolor voluptate neque temporibus illo
+            asperiores saepe dolores eius magni labore quae dignissimos? Tempora aliquid natus nemo odio dignissimos,
+            totam ea unde excepturi quasi? Culpa labore dolorem sapiente, sed amet molestias eveniet illum et
+            consectetur cumque!</p>
+
+    </section>
+
+    <!-- end texto -->
+
+    <!-- start lista -->
+
+    <section style="margin: 2%;" id="arbol-filogenetico">
+
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Clasificación de los dinosaurios
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <h2>Dinosauria</h2>
+                    <li><i>Eoraptor lunensis</i></li>
+                    <li>Herrerasauria</li>
+                    <ul>
+                        <li>Herrerasauridae</li>
+                    </ul>
+                        <h3>Theropoda</h3>
+                        <ul>
+                            <li>Ceratosauria</li>
+                            <ul>
+                                <li>Coelophysoidea</li>
+                                <ul>
+                                    <li><i>Dilophosaurus wetherilli</i></li>
+                                    <li>Coelophysidae</li>
+                                </ul>
+                                <li>Neoceratosauria</li>
+                                <ul>
+                                    <li>Ceratosauridae</li>
+                                    <li>Abelisauroidea</li>
+                                    <ul>
+                                        <li>Abelisauria</li>
+                                        <ul>
+                                            <li>Noasauridae</li>
+                                            <li>Abelisauridae</li>
+                                            <ul>
+                                                <li>Carnotaurinae</li>
+                                                <li>Abelisaurinae</li>
+                                            </ul>
+                                        </ul>
+                                    </ul>
+                                </ul>
+                            </ul>
+                            <li>Tetanurae</li>
+                            <ul>
+                                <li>Spinosauroidea</li>
+                                <ul>
+                                    <li>Megalosauridae</li>
+                                    <ul>
+                                        <li>Megalosaurinae</li>
+                                        <li>Eustreptospondylinae</li>
+                                    </ul>
+                                    <li>Spinosauridae</li>
+                                    <ul>
+                                        <li>Baryonychinae</li>
+                                        <li>Spinosaurinae</li>
+                                    </ul>
+                                </ul>
+                                <li>Avetheropoda</li>
+                                <ul>
+                                    <li>Carnosauria</li>
+                                    <ul>
+                                        <li><i>Monolophosaurus jiangi</i></li>
+                                        <li>Allosauroidea</li>
+                                        <ul>
+                                            <li>Allosauridae</li>
+                                            <li>Sinraptoridae</li>
+                                            <li>Carcharodontosauridae</li>
+                                        </ul>
+                                    </ul>
+                                    <li>Coelurosauria</li>
+                                    <ul>
+                                        <li>Compsognathidae</li>
+                                        <li><i>Proceratosaurus bradleyi</i></li>
+                                        <li><i>Ornitholestes hermanni</i></li>
+                                        <li>Tyrannoraptora</li>
+                                        <ul>
+                                            <li><i>Coelurus fragilis</i></li>
+                                            <li>Tyrannosauroidea</li>
+                                            <ul>
+                                                <li>Dryptosauridae</li>
+                                                <li>Tyrannosauridae</li>
+                                                <ul>
+                                                    <li>Tyrannosaurinae</li>
+                                                    <li>Albertosaurinae</li>
+                                                </ul>
+                                            </ul>
+                                            <li>Maniraptoriformes</li>
+                                            <ul>
+                                                <li>Ornithomimosauria</li>
+                                                <ul>
+                                                    <li>Harpymimidae</li>
+                                                    <li>Garudimimidae</li>
+                                                    <li>Ornithomimidae</li>
+                                                </ul>
+                                                <li>Maniraptora</li>
+                                                <ul>
+                                                    <li>Oviraptorosauria</li>
+                                                    <ul>
+                                                        <li>Caenagnathoidea</li>
+                                                        <ul>
+                                                            <li>Caenagnathidae</li>
+                                                            <li>Oviraptoridae</li>
+                                                            <ul>
+                                                                <li>Oviraptorinae</li>
+                                                            </ul>
+                                                        </ul>
+                                                        <li>Therizinosauroidea</li>
+                                                        <ul>
+                                                            <li>Alxasauridae</li>
+                                                            <li>Therizinosauridae</li>
+                                                        </ul>
+                                                    </ul>
+                                                    <li>Paraves</li>
+                                                    <ul>
+                                                        <li>Eumaniraptora</li>
+                                                        <ul>
+                                                            <li>Deinonychosauria</li>
+                                                            <ul>
+                                                                <li>Troodontidae</li>
+                                                                <li>Dromaeosauridae</li>
+                                                            </ul>
+                                                            <li>Avialae</li>
+                                                        </ul>
+                                                    </ul>
+                                                </ul>
+                                            </ul>
+                                        </ul>
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </ul>
+
+                        <h3>Sauropodomorpha</h3>
+                        <ul>
+                            <li><i>Saturnalia tupiniquim</i></li>
+                            <li>Thecodontosauridae</li>
+                            <li>Prosauropoda</li>
+                            <ul>
+                                <li>Thecodontosauridae</li>
+                                <li>Anchisauria</li>
+                                <ul>
+                                    <li>Anchisauridae</li>
+                                    <li>Melanorosauridae</li>
+                                </ul>
+                                <li>Plateosauria</li>
+                                <ul>
+                                    <li>Massospondylidae</li>
+                                    <li>Yunnanosauridae</li>
+                                    <li>Plateosauridae</li>
+                                </ul>
+                                <li>Sauropoda</li>
+                                <ul>
+                                    <li>Blikanasauridae</li>
+                                    <li>Vulcanodontidae</li>
+                                    <li>Eusauropoda</li>
+                                    <ul>
+                                        <li>Euhelopodidae</li>
+                                        <li>Mamenchisauridae</li>
+                                        <li>Cetiosauridae</li>
+                                        <li>Neosauropoda</li>
+                                        <ul>
+                                            <li>Diplodocoidea</li>
+                                            <ul>
+                                                <li>Rebbachisauridae</li>
+                                                <li>Flagellicaudata</li>
+                                                <ul>
+                                                    <li>Dicraeosauridae</li>
+                                                    <li>Diplodocidae</li>
+                                                </ul>
+                                            </ul>
+                                            <li>Macronaria</li>
+                                            <ul>
+                                                <li><i>Jobaria tiguidensis</i></li>
+                                                <li>Camarasauromorpha</li>
+                                                <ul>
+                                                    <li>Camarasauridae</li>
+                                                    <li>Titanosauriformes</li>
+                                                    <ul>
+                                                        <li>Brachiosauridae</li>
+                                                        <li>Titanosauria</li>
+                                                        <ul>
+                                                            <li>Andesauridae</li>
+                                                            <li>Lithostrotia</li>
+                                                            <ul>
+                                                                <li><i>Isisaurus colberti</i></li>
+                                                                <li><i>Paralititan stromeri</i></li>
+                                                                <li>Nemegtosauridae</li>
+                                                                <li>Saltasauridae</li>
+                                                            </ul>
+                                                        </ul>
+                                                    </ul>
+                                                </ul>
+                                            </ul>
+                                        </ul>
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </ul>
+
+                        <h3>Ornithischia</h3>
+                        <ul>
+                            <li><i>Lesothosaurus diagnosticus</i></li>
+                            <li>Heterodontosauridae</li>
+                            <li>Genasauria</li>
+                            <ul>
+                                <li>Thyreophora</li>
+                                <ul>
+                                    <li>Scelidosauridae</li>
+                                    <li>Eurypoda</li>
+                                    <ul>
+                                        <li>Stegosauria</li>
+                                        <ul>
+                                            <li>Huayangosauridae</li>
+                                            <li>Stegosauridae</li>
+                                            <ul>
+                                                <li><i>Dacentrurus armatus</i></li>
+                                                <li>Stegosaurinae</li>
+                                            </ul>
+                                        </ul>
+                                        <li>Ankylosauria</li>
+                                        <ul>
+                                            <li>Ankylosauridae</li>
+                                            <ul>
+                                                <li><i>Gastonia burgei</i></li>
+                                                <li><i>Shamosaurus scutatus</i></li>
+                                                <li>Ankylosaurinae</li>
+                                            </ul>
+                                            <li>Nodosauridae</li>
+                                        </ul>
+                                    </ul>
+                                </ul>
+                                <li>Cerapoda</li>
+                                <ul>
+                                    <li>Ornithopoda</li>
+                                    <ul>
+                                        <li>Euornithopoda</li>
+                                        <ul>
+                                            <li><i>Hypsilophodon foxii</i></li>
+                                            <li><i>Thescelosaurus neglectus</i></li>
+                                            <li>Iguanodontia</li>
+                                            <ul>
+                                                <li><i>Tenontosaurus tilletti</i></li>
+                                                <li>Rhabdodontidae</li>
+                                                <li>Dryomorpha</li>
+                                                <ul>
+                                                    <li>Dryosauridae</li>
+                                                    <li>Ankylopollexia</li>
+                                                    <ul>
+                                                        <li>Camptosauridae</li>
+                                                        <li>Styracosterna</li>
+                                                        <ul>
+                                                            <li><i>Lurdusaurus arenatus</i></li>
+                                                            <li>Iguanodontoidea</li>
+                                                            <ul>
+                                                                <li>Iguanodontidae</li>
+                                                                <li>Hadrosauridae</li>
+                                                                <ul>
+                                                                    <li><i>Telmatosaurus transsylvanicus</i></li>
+                                                                    <li>Euhadrosauria</li>
+                                                                    <ul>
+                                                                        <li>Lambeosaurinae</li>
+                                                                        <li>Saurolophinae</li>
+                                                                    </ul>
+                                                                </ul>
+                                                            </ul>
+                                                        </ul>
+                                                    </ul>
+                                                </ul>
+                                            </ul>
+                                        </ul>
+                                    </ul>
+                                    <li>Marginocephalia</li>
+                                    <ul>
+                                        <li>Pachycephalosauria</li>
+                                        <ul>
+                                            <li>Goyocephala</li>
+                                            <ul>
+                                                <li>Homalocephaloidea</li>
+                                                <ul>
+                                                    <li>Homalocephalidae</li>
+                                                    <li>Pachycephalosauridae</li>
+                                                </ul>
+                                            </ul>
+                                        </ul>
+                                        <li>Ceratopsia</li>
+                                        <ul>
+                                            <li>Psittacosauridae</li>
+                                            <li>Neoceratopsia</li>
+                                            <ul>
+                                                <li>Coronosauria</li>
+                                                <ul>
+                                                    <li>Protoceratopsidae</li>
+                                                    <li>Bagaceratopidae</li>
+                                                    <li>Ceratopsoidea</li>
+                                                    <ul>
+                                                        <li>Leptoceratopsidae</li>
+                                                        <li>Ceratopsomorpha</li>
+                                                        <ul>
+                                                            <li>Ceratopsidae</li>
+                                                            <ul>
+                                                                <li>Centrosaurinae</li>
+                                                                <li>Chasmosaurinae</li>
+                                                            </ul>
+                                                        </ul>
+                                                    </ul>
+                                                </ul>
+                                            </ul>
+                                        </ul>
+                                    </ul>
+                                </ul>
+                            </ul>
+                        </ul>
+                    </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <!-- end lista -->
+
+    <section style="margin: 2%;">
+
+        <p class="texto-articulo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Error, expedita, provident commodi nulla saepe illo
+            quia quam corrupti, sit molestias asperiores recusandae aperiam placeat unde veniam cumque officiis mollitia
+            consequatur excepturi sunt omnis? Maxime minus, inventore, consectetur sapiente temporibus illo
+            necessitatibus deleniti laudantium, quo molestiae officiis repellendus accusantium! Dignissimos odit rem
+            repellat ratione dolore et culpa saepe, voluptas distinctio facere non error, modi quae officiis eius
+            dolores. Nam deleniti sed officia molestias unde dolores beatae blanditiis explicabo dolorum quas deserunt a
+            cupiditate voluptatibus incidunt, quis recusandae saepe, voluptatem, dignissimos velit iste! Earum eum enim,
+            quisquam molestiae sint ad possimus aspernatur assumenda voluptatem modi! Cum repudiandae voluptatem quaerat
+            unde. Voluptate corrupti praesentium, vel laborum dolorum error quas! Tempora voluptas sapiente cupiditate!
+            Labore in magnam nisi porro illo minus architecto amet cumque, aliquam, sed quia ab dolorum facilis maiores
+            suscipit similique fugit quisquam minima! Vero ea maxime, excepturi impedit quis aspernatur totam inventore
+            dolorem odit, consequatur ducimus hic quidem molestias iste nesciunt maiores sint veniam. Odio,
+            perspiciatis! Nobis quo ea quis. Cum molestias omnis eaque magnam fugiat fuga asperiores quaerat rem,
+            expedita pariatur enim veniam voluptatibus harum sint in ducimus magni perspiciatis quam. Enim earum nemo,
+            quo debitis officiis corporis eos consectetur aspernatur unde tempora hic consequatur temporibus? Sunt
+            aperiam dicta, vel iste ut dignissimos quaerat omnis reprehenderit ab iure assumenda! Eos, hic molestias.
+            Est libero, error quam praesentium quo earum? Eos excepturi necessitatibus praesentium voluptates aspernatur
+            ea sed quia? Deleniti in sint itaque temporibus consectetur cumque? Veritatis beatae fugit blanditiis alias
+            qui laboriosam suscipit adipisci, ullam dolor rem maiores obcaecati similique! Nostrum tempora,
+            exercitationem illum voluptatum sapiente reiciendis aut animi deleniti eos pariatur! Esse quasi voluptas a
+            accusantium nobis deserunt temporibus nostrum voluptates rem. Deleniti quos voluptatem, quibusdam totam
+            officia vitae perspiciatis nobis est quisquam reprehenderit pariatur consectetur quod nemo dolorum. Minus
+            architecto nobis dolore aliquam totam corporis aut non vero, expedita animi aperiam dicta accusantium cum
+            minima hic suscipit incidunt assumenda ut quas deserunt autem. Quasi atque, recusandae suscipit maiores
+            placeat dolores enim fugit? Doloribus ducimus adipisci ut praesentium vero maiores, unde officiis odio, vel
+            ratione tempore quae quia sint nesciunt beatae impedit ex harum vitae dolorem! Quibusdam ratione
+            necessitatibus accusantium libero doloribus fuga delectus sed quasi reiciendis repudiandae, earum nobis
+            eligendi maxime adipisci consequuntur eius consequatur quae ipsum doloremque mollitia possimus veniam totam
+            iure. Rerum repellat, ut libero dolores quaerat ad cum delectus, iure culpa dignissimos voluptate temporibus
+            esse.
+        </p>
+
+    </section>
+
+    <!-- Start Footer -->
+    <footer class="bg-secondary">
+
+        <div class="container">
+            <div class="row bg-secondary justify-content-center py-2">
+                <div class="col-12 col-sm-6 col-md-3 text-start">
+                    <a class="text-decoration-none" href="index.html">
+                        <h2 class="text-light">Dinopedia</h2>
+                    </a>
+                    <p class="text-light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, voluptate sed.</p>
+                    <ul class="list-unstyled text-light">
+                        <li>
+                            <i class='bx-fw bx bx-phone bx-xs'></i><a class="text-decoration-none text-light py-1" 
+                            href="tel:012-3456-7890">012-3456-7890</a>
+                        </li>
+                        <li>
+                            <i class='bx-fw bx bx-mail-send bx-xs'></i><a class="text-decoration-none text-light py-1"
+                            href="mailto:dinopedia.contacto@gmail.com">dinopedia.contacto@gmail.com</a>
+                        </li>
+                    </ul>
+                    <ul class="list-inline footer-icons light-300">
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="http://facebook.com">
+                                <i class='bx bxl-facebook-square bx-md'></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="http://twitter.com">
+                                <i class='bx bxl-twitter bx-md'></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="http://instagram.com">
+                                <i class='bx bxl-instagram bx-md'></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item m-0">
+                            <a class="text-light" target="_blank" href="https://web.telegram.org/#/login">
+                                <i class='bx bxl-telegram bx-md'></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-2 text-start">
+                    <h2 class="text-light">Enlaces</h2>
+                    <ul class="list-unstyled text-light">
+                        <li>
+                            <a class="text-decoration-none text-light" href="index.html">
+                                Inicio
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="triasico.html">
+                                El mundo mesozoico
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="enciclopedia.html">
+                                Dinosaurios de la A a la Z
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="paleoarte.html">
+                                Paleoarte
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="foro.html">
+                                Foro
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-2 text-start">
+                    <h2 class="text-light">Tienda</h2>
+                    <ul class="list-unstyled text-light">
+                        <li>
+                            <a class="text-decoration-none text-light" href="#">
+                                Ropa
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="#">
+                                Accesorios
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="#">
+                                Pósters
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="#">
+                                Rompecabezas
+                            </a>
+                        </li>
+                        <li>
+                            <a class="text-decoration-none text-light" href="#">
+                                Juguetes
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-6 col-md-5 text-light text-start">
+                    <h2 class="text-light">Suscríbase a nuestra newsletter</h2>
+                    <form action="#" method="POST">
+                        <div class="form-row d-flex flex-fill">
+                            <input class="form-control" type="email" placeholder="Ingrese su e-mail" required>
+                            <input class="btn btn-primary" type="submit" value="Suscribirse">
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 bg-primary">
+            <div class="container">
+                <div class="row pt-2">
+                    <div class="col-12 col-sm-6">
+                        <p class="text-lg-start text-center text-light light-300">
+                            © Copyright 2021 Dinopedia. Todos los derechos reservados.
+                        </p>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <p class="text-lg-end text-center text-light light-300">
+                            Diseñado por <a rel="sponsored" class="text-decoration-none text-light" 
+                            href="https://www.linkedin.com/in/augusto-rehfeldt-9aa01320a/" target="_blank"><strong>Augusto Rehfeldt</strong></a> y <a rel="sponsored" class="text-decoration-none text-light" 
+                            href="https://cursophp.com.ar/" target="_blank"><strong>CAC FullStack</strong></a>
+                        </p>
+                        <p class="text-light text-end">
+                            Esta página web tiene un fin meramente educativo, por ahora.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <!-- Lightbox -->
+    <script src="assets/js/fslightbox.js"></script>
+    <script>
+        fsLightboxInstances['gallery'].props.loadOnlyCurrentSource = true;
+    </script>
+    <!-- Load jQuery require for isotope -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Isotope -->
+    <script src="assets/js/isotope.pkgd.js"></script>
+    <!-- Page Script -->
+    <script>
+        $(window).load(function () {
+            // init Isotope
+            var $projects = $('.projects').isotope({
+                itemSelector: '.project',
+                layoutMode: 'fitRows'
+            });
+            $(".filter-btn").click(function () {
+                var data_filter = $(this).attr("data-filter");
+                $projects.isotope({
+                    filter: data_filter
+                });
+                $(".filter-btn").removeClass("active");
+                $(".filter-btn").removeClass("shadow");
+                $(this).addClass("active");
+                $(this).addClass("shadow");
+                return false;
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
